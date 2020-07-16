@@ -1,0 +1,31 @@
+
+
+body {
+  height: 100%;
+  min-height: 100%;
+  background: #eceff1;
+}
+
+@media only screen and (max-width: 992px) {
+  .brand-logo img {
+    width: auto;
+    height: 48px;
+  }
+}
+
+@media only screen and (min-width: 993px) {
+  .brand-logo img {
+    width: auto;
+    height: 61px;
+  }
+}
+/* working on Form Button effect */
+.waves-effect.waves-grey .waves-ripple {
+  background-color: #37474f;
+}
+.page-footer {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}

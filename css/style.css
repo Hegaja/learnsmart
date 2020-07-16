@@ -1,0 +1,271 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background: #eceff1;
+}
+.section {
+  display: block;
+  overflow: auto;
+}
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+/* Just some config to solve "valign bug" */
+/* @media screen and (max-width: 768px) {
+  .valign-wrapper {
+    display: inline-block;
+  }
+} */
+@media only screen and (min-width: 769px) {
+  .parallax-container {
+    height: 400px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .parallax-container {
+    height: 200px;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  #index-banner {
+    /*Ajuste a largura e altura desejadas aqui*/
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+
+    /*isto fará o elemento video e o .container se adaptarem ao #index-banner*/
+    position: relative;
+  }
+
+  #index-banner > #myVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /*apenas um -1 é necessário quando se trabalha com relative + absolute, sendo pai e filho*/
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* evita do video passar a altura desejada do #index-banner */
+  }
+  #index-banner > #myVideo > video {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #index-banner {
+    background: #455a64;
+  }
+  #index-banner > #myVideo {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 993px) {
+  #serviceCard {
+    height: 500px;
+
+    cursor: pointer;
+    -webkit-transition: -webkit-box-shadow 0.25s;
+    transition: -webkit-box-shadow 0.25s;
+    transition: box-shadow 0.25s;
+    transition: box-shadow 0.25s, -webkit-box-shadow 0.25s;
+  }
+  #serviceCard:hover {
+    -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  #serviceCard {
+    height: 260px;
+    /* min-width:200px; */
+    max-width:300px;
+    display: block;
+   float: none;
+   margin-left: auto;
+   margin-right: auto;
+
+  }
+}
+
+#imageHeader {
+  width: auto;
+  height: 400px;
+  border: 1px solid #fff;
+  border-radius: 9px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#serviceCard .material-icons {
+  color: #546e7a;
+}
+/* ##################################################### */
+/* #################     FORM     ###################### */
+/* ##################################################### */
+/* label color */
+.input-field label {
+  color: #fff !important;
+}
+.input-field label.valid {
+  color: #fff !important ;
+}
+/* label focus color */
+.input-field input[type="text"]:focus + label {
+  color: #fff !important;
+}
+
+.input-field input.valid + label {
+  color: #fff !important;
+}
+/* label underline focus color */
+.input-field input[type="text"]:focus {
+  border-bottom: 2px solid #fff !important;
+}
+.input-field input[type="email"]:focus {
+  border-bottom: 2px solid #fff !important;
+}
+
+
+/* icon prefix focus color */
+.input-field .prefix.active {
+  color: #fff !important;
+}
+
+/* Coloring the TextArea Field */
+textarea {
+  color: #fff;
+  border-bottom: 1px solid #fff !important;
+}
+
+textarea:focus {
+  border-bottom: 1px solid #fff !important;
+  box-shadow: 0 1px 0 0 #fff !important;
+}
+textarea:focus + label {
+  color: #fff !important;
+}
+textarea.valid + label {
+  color: #fff !important;
+}
+
+textarea.valid {
+  border-bottom: 1px solid #fff !important;
+  box-shadow: 0 1px 0 0 #fff !important;
+}
+/* underline color */
+.input-field input {
+  color: #fff;
+  border-bottom: 2px solid #fff;
+}
+/* working on Form Button effect */
+.waves-effect.waves-grey .waves-ripple {
+  background-color: #37474f;
+}
+
+/* valid color */
+.input-field input[type="text"].valid {
+  color: #fff;
+  border-bottom: 2px solid green !important;
+}
+/* invalid color */
+.input-field input[type="text"].invalid {
+  border-bottom: 2px solid red !important;
+}
+/* ###############    END OF FORM   #################### */
+/* ##################################################### */
+
+@media only screen and (min-width: 993px) {
+  #cardLeft {
+    float: left;
+  }
+  #cardRight {
+    float: right;
+  }
+  .cardTextR {
+    /* margin-top: 30%; */
+    margin-right: 1%;
+    margin-left: -1%;
+  }
+  .cardTextL {
+    /* margin-top: 30%; */
+    margin-right: -1%;
+    margin-left: 1%;
+  }
+
+  .imageTeam {
+    height: 300px;
+    width: 300px;
+    margin: 0 5% 0 5%;
+  }
+  .imageTeam img {
+    border-radius: 50%;
+    /* margin: 0 5% 0 5%; */
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  #cardLeft {
+    /* float: left; */
+  }
+  #cardRight {
+    /* float: right; */
+  }
+  #completeCard {
+    border: 1px solid #37474f ;
+    border-radius: 9px;
+    margin: 3px 0 3px 0;
+    padding: 0;
+  }
+  .cardTextR {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .cardTextL {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .imageTeam {
+    height: 300px;
+    width: 300px;
+    /* margin: 0 5% 0 5%; */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .imageTeam img {
+    /* display: block; */
+    border-radius: 50%;
+    /* margin: 0 5% 0 5%; */
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .brand-logo img {
+    width: auto;
+    height: 55px;
+  }
+}
+
+@media only screen and (min-width: 993px) {
+  .brand-logo img {
+    width: auto;
+    height: 61px;
+  }
+}
+
+#completeCard h5 {
+  color: #455a64;
+}
+#completeCard h3 {
+  color: #263238;
+}
